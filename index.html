@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Dinner planner</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
+</head>
+<body>
+
+
+
+  <div class="container-fluid">
+    <div class="row">
+      <header class="col-xs-12">
+        <h1 class="po">Dinner Planner</h1>
+      </header>
+    </div>
+  </div>
+<!--first screen-->
+<div id="index">
+  <div class="container-fluid">
+    <div class="row">
+      <div id="exampleView" class="col-xs-12">
+        <!-- <div class="description">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          </p>
+          <button type="button" name="button" id="start_button" class="btn deliver"> Create new Dinner</button>
+        </div> -->
+      </div>
+    </div>
+  </div>
+</div>
+<!--second screen-->
+<div class="new" id="new">
+  <div class="flex_container">
+
+    <div class="side" id="overview_dinner">
+      <div class="dinner">
+        <h3>My Dinner</h3>
+        <h1 id="demo"></h1>
+        <span>People #</span>
+        <span id="numberList" class="numberList"></span>
+        <button type="button" name="button" id="plusGuest"> <span class="glyphicon glyphicon-chevron-up"></span></button>
+        <button type="button" name="button" id="minusGuest"><span class="glyphicon glyphicon-chevron-down"></span></button>
+        <div id="btn" data-toggle="collapse"  data-target="#expanded">
+          <svg viewBox="0 0 800 600">
+          <path d="M 300 220 C 300 220 500 220 540 220 C 740 220 640 540 520 420 C 440 340 300 200  300 200 "id="top" stroke="green" stroke-width="3" fill="none"/>
+          <path d="M 300 320 C 300 320 500 320 540 320 C 740 320 740 530 540 520 L 540 520" stroke="green" id="middle" stroke-width="3" fill="none" />
+          <path d="M 300 210 C 300 210 520 210 540 210 C 740 210 640 530 520 410 C 440 330 300 190 300 190" id="bottom" stroke="green" stroke-width="3" id="bottom" fill="none" transform="translate(480 ,320) scale(1,-1) translate(-480 ,-318)"/>
+          </svg>
+        </div>
+      </div>
+      <div id="expanded" class="collapse navbar-collapse">
+        <div class="order_details ">
+            <span>Dish Name</span>
+            <span>Cost</span>
+        </div>
+        <div id="dish_space">
+          <!-- <div class="order_dishes">
+            <span>NAme</span>
+            <span>Price</span>
+          </div>
+          <div class="price_list">
+            <p>SEK 0.00</p>
+          </div> -->
+        </div>
+        <button type="button" name="button" class="confirm" id="confirmation"> Confirm Dinner</button>
+
+      </div>
+
+    </div>
+
+    <div class="nside" id="nside">
+
+      <div class="lis">
+        <div class="order_form">
+          <h3>FIND A DISH</h3>
+          <form class="form-inline" action="">
+            <div class="form-group">
+              <input type="text" class="form-control" id="keyfilter" placeholder="Enter key word">
+            </div>
+            <!---->
+            <div class="dropdown display_inline">
+              <button class="btn btn-default dropdown-toggle" type="button" id="search" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                Choose the type
+                <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="search" id="dropdown">
+                <li><a href="#">all</a></li>
+
+              </ul>
+            </div>
+            <button type="submit" class="btn btn-default" id="search_button">Search</button>
+          </form>
+        </div>
+      </div>
+      <div class="info" id="info">
+      </div>
+    </div>
+    <div id="plan">
+      <div class="planning" id="planning">
+      </div>
+    </div>
+
+  </div>
+</div>
+<!--third screen-->
+<div class="over" id="over">
+  <div id="overview_dinner_list">
+    <div class="short_intro">
+      <div class="short_info">
+        <p>My Dinner: <span id="people"></span> people</p>
+        <button type="button" name="button"class="deliver" id="go_back">Go back and edit dinner</button>
+      </div>
+    </div>
+
+  </div>
+
+    <div class="dish_list" id="dish_list">
+
+      <!-- <div class="toast">
+        <div class="brief">
+          Toast
+        </div>
+        <p>77.20 SEK</p>
+      </div>
+
+      <span class="vl"></span>
+      <div class="total">
+        <div class="sum">
+          <p>Total:</p>
+          <p>231.6 SEK</p>
+        </div>
+      </div> -->
+
+    </div>
+
+    <hr class="style14">
+
+
+    <div class="print">
+      <button type="button" name="button" class="deliver" id="print_full_recipe">Print Full Recipe</button>
+    </div>
+
+</div>
+
+<!--fourth screen-->
+<div id="plan">
+
+
+  <div class="planning" id="planning">
+
+
+
+
+    <!-- <div class="plan_desc">
+      <h1>Toast</h1>
+      <img src="./images/toast.jpg" alt="toast image">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip </p>
+      <button type="button" name="button" class="deliver">Back to search</button>
+    </div> -->
+
+    <!-- <div class="plan_info">
+      <div class="plan_table">
+        <h1>INGREDIENTS FOR 3 PEOPLE</h1>
+
+        <table class="table">
+                <tr>
+                  <td>2tbsp</td>
+                  <td >olive oil</td>
+                  <td >SEK</td>
+                  <td >0.20</td>
+                </tr>
+                <tr>
+                  <th>750g</th>
+                  <td>lean beef mince</td>
+                  <td>SEK</td>
+                  <td>10.00</td>
+                </tr>
+                <tr>
+                  <th scope="row">90g</th>
+                  <td>pack rosciutto</td>
+                  <td>SEK</td>
+                  <td>15</td>
+                </tr>
+                <tr>
+                  <th scope="row">100ml</th>
+                  <td>tomato sauce</td>
+                  <td>SEK</td>
+                  <td>10.00</td>
+                </tr>
+                <tr>
+                  <th scope="row">200ml</th>
+                  <td>hot beef stock</td>
+                  <td>SEK</td>
+                  <td>20.00</td>
+                </tr>
+                <tr>
+                  <th scope="row">300g</th>
+                  <td>fresh pck lasagne sheets</td>
+                  <td>SEK</td>
+                  <td>5.00</td>
+                </tr>
+                <tr>
+                  <th scope="row">125g</th>
+                  <td>ball mozzarella</td>
+                  <td>SEK</td>
+                  <td>12.00</td>
+                </tr>
+                <tr>
+                  <th scope="row">100ml</th>
+                  <td>white sauce</td>
+                  <td>SEK</td>
+                  <td>5.00</td>
+                </tr>
+            </table>
+            <hr>
+            <button type="button" name="button" class="deliver">Add to menu</button>
+            <p>SEK 77.20</p>
+      </div>
+
+    </div> -->
+<!--
+    <div class="plan_prep">
+
+    </div> -->
+
+
+  </div>
+
+
+
+</div>
+<!--fifth screen-->
+<div id="print">
+  <div id="present">
+    <!-- <div class="plates_list">
+      <div class="plate_description">
+        <img src="./images/toast.jpg" alt="image">
+        <h1>Toast</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+      </div>
+      <div class="plate_prep">
+        <h4>Preparation</h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+      </div>
+
+    </div> -->
+
+  </div>
+
+</div>
+
+
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <!-- Bootstrap JavaScript, needed if you want for instance tabs, models, popovers etc. -->
+  <script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+
+
+  <!-- TODO: Here you should include JS code for your other views -->
+  <!-- The application JavaScript code -->
+  <script src="js/app.js"></script>
+  <script src="js/script.js"></script>
+  <script src="js/model/dinnerModel.js"></script>
+  <script src="js/controllers/exampleCtrl.js"></script>
+  <script src="js/controllers/indexctrl.js"></script>
+  <script src="js/controllers/plannerctrl.js"></script>
+  <script src="js/controllers/overctrl.js"></script>
+  <script src="js/controllers/moneyCtrl.js"></script>
+  <script src="js/view/exampleView.js"></script>
+  <script src="js/view/search.js"></script>
+  <script src="js/view/indexview.js"></script>
+  <script src="js/view/over.js"></script>
+  <script src="js/view/description.js"></script>
+  <script src="js/view/money.js"></script>
+  <script src="js/view/planner.js"></script>
+
+
+
+
+</html>

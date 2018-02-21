@@ -6,16 +6,16 @@ var PlanView = function(container, model) {
 
   var loadPlanner = function() {
 
-    var maindiv = container.find("#planning")[0];
-    while (maindiv.firstChild) {
-      maindiv.removeChild(maindiv.firstChild);
-    }
-
-
-      id =model.getcurrent();
+      id = model.getcurrent();
       var number = model.getNumberOfGuests();
       var dish = model.getDish(id);
 
+      var maindiv = container.find("#planning")[0];
+      while (maindiv.firstChild) {
+        maindiv.removeChild(maindiv.firstChild);
+      }
+
+      console.log(id);
 
       var planning = container.find("#planning")[0];
 

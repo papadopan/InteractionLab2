@@ -6,6 +6,7 @@ var DinnerModel = function() {
 	this.setcurrent = function(num)
 	{
 		current = num;
+		notifyObservers();
 	}
 
 	this.getcurrent = function() {

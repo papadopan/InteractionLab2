@@ -20,6 +20,7 @@ for (var i = 0, len = g.length; i < len; i++)
 
         $(view.maindiv).delegate(".button_pressed" , "click" , function(){
           var identify = this.getAttribute("data-identify");
+          console.log("data " + identify );
           //set the id of the dish to present
           model.setcurrent(identify);
           //call the function to display the specific dish that is clicked

@@ -3,8 +3,6 @@ var OverCtrl = function(view , model  , generalControler)
 
   view.populate("all");
 
-
-
   //when this button is clicked
   //display the dishes based on the type
   view.Search_Button.click(function(){
@@ -22,7 +20,8 @@ for (var i = 0, len = g.length; i < len; i++)
 
         $(view.maindiv).delegate(".button_pressed" , "click" , function(){
           var identify = this.getAttribute("data-identify");
-          plan = new PlanView($("#plan"),model , identify);
+          //set the id of the dish to present
+          model.setcurrent(identify);
           //call the function to display the specific dish that is clicked
           generalControler.displaSpecificDish();
           })

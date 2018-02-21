@@ -1,6 +1,18 @@
 //DinnerModel Object constructor
 var DinnerModel = function() {
 
+	//in order to keep the id for the planner
+	var current = 1;
+	this.setcurrent = function(num)
+	{
+		current = num;
+	}
+
+	this.getcurrent = function() {
+		return current;
+	}
+
+
 	//Create observers for the model
 	var observers = [];
 
@@ -24,7 +36,6 @@ var DinnerModel = function() {
 		//remove the observer from the array
 		observers.splice(index,1);
 	}
-
 
 
 	//TODO Lab 1 implement the data structure that will hold number of guest

@@ -60,23 +60,21 @@ path#middle{
 #index{
   display: block;
 }
-#new{
+#example{
   display: none;
 }
-#over{
+#money{
   display: none;
 }
 #plan{
   display: none;
 }
-#print{
+#final_description{
   display: none;
 }
 
-
-
 /*********************************************/
-#exampleView{
+#indexview{
   display: flex;
   min-height: 90vh;
   background-color: white;

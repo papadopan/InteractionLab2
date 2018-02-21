@@ -1,9 +1,5 @@
-$(document).ready(function(){
-
-  $("#btn").click(function(){
-      $("div").toggleClass("cross");
-
-  });
-
-
-});
+// $(document).ready(function(){
+//   $("#btn").click(function(){
+//       $("div").toggleClass("cross");
+//   });
+// });

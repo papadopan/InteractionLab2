@@ -1,11 +1,14 @@
 
 var SearchView = function (container, model) {
 
+  //save the container to a variable
+  //the controller can fetch it
+  this.wrapper = container;
 
-   var types_of_dishes = new Array();
-   types_of_dishes = model.getTypes();
+   var types_of_dishes = model.getTypes();
+  
 
-
+   //use the type of dishes in the dropdown menu
    for (i in types_of_dishes)
    {
      var itemli = document.createElement("LI");
@@ -17,11 +20,8 @@ var SearchView = function (container, model) {
      dropdown.appendChild(itemli);
    }
 
-   //change the text to the dropdown menu
-   $("#dropdown li a").click( function (){
-     $("#search").text(this.textContent);
-   });
 
+   //functions hide and show
    this.hide = function()
    {
      container.hide();
